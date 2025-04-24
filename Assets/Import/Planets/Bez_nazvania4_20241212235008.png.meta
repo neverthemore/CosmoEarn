@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: a144037be92ea7d42b55ca8484a6de5c
+guid: bbc3029f74d9bfe47bb8230a26f38f5e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3375781739270887710
-    second: burning_loop_4_0
-  - first:
-      213: 7525090803310951411
-    second: burning_loop_4_1
-  - first:
-      213: -2614481539037402178
-    second: burning_loop_4_2
-  - first:
-      213: -8006362584891074903
-    second: burning_loop_4_3
-  - first:
-      213: -9186079439518740606
-    second: burning_loop_4_4
-  - first:
-      213: -6875710897720324838
-    second: burning_loop_4_5
+      213: 3113884909372628694
+    second: Bez_nazvania4_20241212235008_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -141,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: burning_loop_4_0
+      name: Bez_nazvania4_20241212235008_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 10
-        height: 20
+        x: 213
+        y: 354
+        width: 556
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,118 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e6228fc460d621d0800000000000000
-      internalID: -3375781739270887710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: burning_loop_4_1
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 0
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3fb78e9473e7e6860800000000000000
-      internalID: 7525090803310951411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: burning_loop_4_2
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 0
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebbebd174ee77bbd0800000000000000
-      internalID: -2614481539037402178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: burning_loop_4_3
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 0
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a6d69806afa3e090800000000000000
-      internalID: -8006362584891074903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: burning_loop_4_4
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 28f47f07b6d748080800000000000000
-      internalID: -9186079439518740606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: burning_loop_4_5
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a1d091b1e519490a0800000000000000
-      internalID: -6875710897720324838
+      spriteID: 6deda96b3ddb63b20800000000000000
+      internalID: 3113884909372628694
       vertices: []
       indices: 
       edges: []
@@ -276,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3a200fe4555452c43985b7ee77b34e67
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      burning_loop_4_0: -3375781739270887710
-      burning_loop_4_1: 7525090803310951411
-      burning_loop_4_2: -2614481539037402178
-      burning_loop_4_3: -8006362584891074903
-      burning_loop_4_4: -9186079439518740606
-      burning_loop_4_5: -6875710897720324838
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

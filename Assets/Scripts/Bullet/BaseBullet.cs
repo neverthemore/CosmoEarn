@@ -16,7 +16,7 @@ public class BaseBullet : MonoBehaviour
     }
     public void Attack()
     {
-        rb.linearVelocity = Vector2.up * bulletSpeed;
+        rb.linearVelocity = transform.up * bulletSpeed;
         Destroy(gameObject, 3f);
     }
 

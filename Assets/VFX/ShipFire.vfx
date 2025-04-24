@@ -78,7 +78,7 @@ MonoBehaviour:
   colorMapping: 0
   uvMode: 1
   flipbookLayout: 0
-  flipbookBlendFrames: 1
+  flipbookBlendFrames: 0
   flipbookMotionVectors: 0
   useSoftParticle: 0
   vfxSystemSortPriority: 0
@@ -1043,7 +1043,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.FlipBook, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":8,"y":1}'
+      m_SerializableObject: '{"x":6,"y":1}'
     m_Space: -1
   m_Property:
     name: flipBookSize
@@ -1143,7 +1143,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"692b1082a3cb5624f9a4c5d28e7ff745","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"a144037be92ea7d42b55ca8484a6de5c","type":3}}'
     m_Space: -1
   m_Property:
     name: mainTexture

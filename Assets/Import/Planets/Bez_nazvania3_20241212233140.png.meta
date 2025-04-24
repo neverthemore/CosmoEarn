@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: a144037be92ea7d42b55ca8484a6de5c
+guid: 32fc96cd4f683c84c96fc339bec92bdd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3375781739270887710
-    second: burning_loop_4_0
+      213: 6497581586868477079
+    second: Bez_nazvania3_20241212233140_0
   - first:
-      213: 7525090803310951411
-    second: burning_loop_4_1
+      213: -7033850313416931536
+    second: Bez_nazvania3_20241212233140_1
   - first:
-      213: -2614481539037402178
-    second: burning_loop_4_2
+      213: 3901702023208088231
+    second: Bez_nazvania3_20241212233140_2
   - first:
-      213: -8006362584891074903
-    second: burning_loop_4_3
+      213: -7956727958541684978
+    second: Bez_nazvania3_20241212233140_3
   - first:
-      213: -9186079439518740606
-    second: burning_loop_4_4
-  - first:
-      213: -6875710897720324838
-    second: burning_loop_4_5
+      213: -4245453714447357390
+    second: Bez_nazvania3_20241212233140_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -141,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: burning_loop_4_0
+      name: Bez_nazvania3_20241212233140_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 10
-        height: 20
+        x: 285
+        y: 131
+        width: 450
+        height: 473
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e6228fc460d621d0800000000000000
-      internalID: -3375781739270887710
+      spriteID: 79c1a60170c0c2a50800000000000000
+      internalID: 6497581586868477079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: burning_loop_4_1
+      name: Bez_nazvania3_20241212233140_1
       rect:
         serializedVersion: 2
-        x: 10
-        y: 0
-        width: 10
-        height: 20
+        x: 511
+        y: 599
+        width: 11
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3fb78e9473e7e6860800000000000000
-      internalID: 7525090803310951411
+      spriteID: 0378389286eb26e90800000000000000
+      internalID: -7033850313416931536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: burning_loop_4_2
+      name: Bez_nazvania3_20241212233140_2
       rect:
         serializedVersion: 2
-        x: 20
-        y: 0
-        width: 10
-        height: 20
+        x: 520
+        y: 604
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +197,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ebbebd174ee77bbd0800000000000000
-      internalID: -2614481539037402178
+      spriteID: 7a2bdb86151a52630800000000000000
+      internalID: 3901702023208088231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: burning_loop_4_3
+      name: Bez_nazvania3_20241212233140_3
       rect:
         serializedVersion: 2
-        x: 30
-        y: 0
-        width: 10
-        height: 20
+        x: 542
+        y: 600
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +219,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a6d69806afa3e090800000000000000
-      internalID: -8006362584891074903
+      spriteID: e0f24b80416049190800000000000000
+      internalID: -7956727958541684978
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: burning_loop_4_4
+      name: Bez_nazvania3_20241212233140_4
       rect:
         serializedVersion: 2
-        x: 40
-        y: 0
-        width: 10
-        height: 20
+        x: 547
+        y: 599
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,30 +241,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 28f47f07b6d748080800000000000000
-      internalID: -9186079439518740606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: burning_loop_4_5
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 0
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a1d091b1e519490a0800000000000000
-      internalID: -6875710897720324838
+      spriteID: 23aa000175e1515c0800000000000000
+      internalID: -4245453714447357390
       vertices: []
       indices: 
       edges: []
@@ -276,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3a200fe4555452c43985b7ee77b34e67
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +260,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      burning_loop_4_0: -3375781739270887710
-      burning_loop_4_1: 7525090803310951411
-      burning_loop_4_2: -2614481539037402178
-      burning_loop_4_3: -8006362584891074903
-      burning_loop_4_4: -9186079439518740606
-      burning_loop_4_5: -6875710897720324838
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
