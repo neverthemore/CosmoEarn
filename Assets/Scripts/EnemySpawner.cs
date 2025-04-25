@@ -8,11 +8,22 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] GameObject simpleEnemy;
     [SerializeField] Transform formationPoint;
-    [SerializeField] int enemyCount = 10;
+
+    private ISpawnStrategy currentStrategy;
 
     private void Start()
     {
-        StartCoroutine(StartSpawning());
+        var trickle = new TrickleSpawn(10, 1.5f);
+        SetStrategy(trickle);
+
+        //Можно сделать Scriptable для изменений спавна врагов, и постепенно запускать через события или через время
+        //+ я бы сделал так, что формирования делились например по 10 кораблей на фигуру
+    }
+
+    public void SetStrategy(ISpawnStrategy strategy)
+    {
+        currentStrategy = strategy;
+        StartCoroutine(currentStrategy.ExecuteSpawn(this));
     }
 
     public void SpawnEnemy()
@@ -33,12 +44,4 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private IEnumerator StartSpawning()
-    {
-        for (int i = 0; i < enemyCount; i++)
-        {
-            SpawnEnemy();
-            yield return new WaitForSeconds(2);
-        }
-    }
 }
