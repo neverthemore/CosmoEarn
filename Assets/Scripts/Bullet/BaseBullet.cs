@@ -6,6 +6,7 @@ public class BaseBullet : MonoBehaviour
     [SerializeField] float bulletSpeed = 10f;
     [SerializeField] int bulletDamage = 1;
 
+
     public bool _isFriendly = false;
     //Тут нужно еще делать проверку, своя ли это пуля, чтобы себя не била
     Rigidbody2D rb;
@@ -16,7 +17,14 @@ public class BaseBullet : MonoBehaviour
     }
     public void Attack()
     {
-        rb.linearVelocity = -transform.up * bulletSpeed;
+        if (_isFriendly)
+        {
+            rb.linearVelocity = transform.up * bulletSpeed;
+        }
+        else
+        {
+            rb.linearVelocity = -transform.up * bulletSpeed;
+        }
         Destroy(gameObject, 2f);
     }
 

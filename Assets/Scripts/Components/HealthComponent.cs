@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class HealthComponent : MonoBehaviour, IDamageable
 
     [SerializeField] bool _isFriendly = false;
 
+    [SerializeField] Animator[] animator;
+
 
     private void Awake()
     {
@@ -18,6 +21,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        //animator[Random.Range(0, animator.Length)].Play();
         Debug.Log("Получен урон: " + name);
         if (currentHealth <= 0)
         {
