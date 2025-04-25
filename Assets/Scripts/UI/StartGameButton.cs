@@ -14,6 +14,33 @@ public class StartGameButton : MonoBehaviour
     [SerializeField] Image[] ComicsImages;
     [SerializeField] float ComicsPageTime = 0.2f;
 
+    [SerializeField] GameObject AngarPanel;
+
+    private void Start()
+    {
+
+        Color transColor = new Color(1, 1, 1, 0);
+        
+        ComicsPanel.gameObject.SetActive(false);
+        ComicsBackground.color = transColor;
+
+        foreach (var image in ComicsImages)
+        {
+            image.color = transColor;
+            image.gameObject.SetActive(false);
+        }
+        gameObject.SetActive(true);
+        AngarPanel.gameObject.SetActive(false);
+
+        transColor = ComicsBackground.color;
+        transColor.a = 0;
+        ComicsBackground.color = transColor;
+
+        transColor = new Color(0, 0, 0, 0);
+        FadeImage.color = transColor;
+        FadeImage.gameObject.SetActive(false);
+    }
+
     public void StartGame()
     {
         Debug.Log("Начали");
