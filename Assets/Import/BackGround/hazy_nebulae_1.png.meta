@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hazy_nebulae_1_0: 6951231224522961265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

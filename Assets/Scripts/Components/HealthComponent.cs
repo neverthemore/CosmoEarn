@@ -10,6 +10,8 @@ public class HealthComponent : MonoBehaviour, IDamageable
 
     [SerializeField] bool _isFriendly = false;
 
+    [SerializeField] AudioSource PlayerDeathSound;
+    
     [SerializeField] Animator[] animator;
 
 
@@ -26,6 +28,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
         if (currentHealth <= 0)
         {
             Die();
+            PlayerDeathSound.Play();
         }
     }
 
