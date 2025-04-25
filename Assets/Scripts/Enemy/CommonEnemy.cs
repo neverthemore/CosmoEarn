@@ -6,8 +6,9 @@ public class CommonEnemy : BaseEnemy
     [SerializeField] Transform firePoint;
     [SerializeField] float maxFireRate;
     [SerializeField] float dragRate;
+    [SerializeField] AudioSource EnemyFire;
     float fireRate;
-
+    
     private float fireCooldown;
 
     protected override void Update()
@@ -25,6 +26,7 @@ public class CommonEnemy : BaseEnemy
 
     public override void Fire()
     {
+        EnemyFire.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<BaseBullet>()._isFriendly = false;
         bullet.GetComponent<BaseBullet>().Attack();

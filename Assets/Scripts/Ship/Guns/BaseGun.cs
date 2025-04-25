@@ -9,7 +9,7 @@ public class BaseGun : MonoBehaviour
     [SerializeField] float fireRate = 1f;
 
     private float fireCooldown = 0f;
-
+    [SerializeField] AudioSource FireSound;
     public virtual void Attack()
     {
         fireCooldown -= Time.deltaTime;
@@ -18,6 +18,7 @@ public class BaseGun : MonoBehaviour
         {
             Fire();
             fireCooldown = fireRate;
+            FireSound.Play();
         }
     }
 

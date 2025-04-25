@@ -107,6 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   _isFriendly: 0
+  PlayerDeathSound: {fileID: 490133242298331768, guid: fd7667ccbb6daf74e8fb56598289bf59, type: 3}
+  animator: []
 --- !u!61 &5229487943766818910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -201,6 +203,7 @@ MonoBehaviour:
   firePoint: {fileID: 7921487684808223683}
   maxFireRate: 0
   dragRate: 0
+  EnemyFire: {fileID: 3686690206457131014, guid: 289ea4e2100a88d4bbc2f3db0e0ba592, type: 3}
 --- !u!1 &724180888094240898
 GameObject:
   m_ObjectHideFlags: 0
