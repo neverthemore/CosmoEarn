@@ -9,27 +9,24 @@ public class CommonEnemy : BaseEnemy
     float fireRate;
 
     private float fireCooldown;
-    public override void Fire()
-    {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<BaseBullet>()._isFriendly = false;
-        bullet.GetComponent<BaseBullet>().Attack();
-    }
 
-    public void Drag()
-    {
-        
-    }
-    public override void Update()
+    protected override void Update()
     {
         base.Update();
-        fireRate = Random.Range(1, maxFireRate);
         fireCooldown -= Time.deltaTime;
 
         if (fireCooldown <= 0f)
         {
             Fire();
+            fireRate = Random.Range(1, maxFireRate);
             fireCooldown = fireRate;
         }
+    }
+
+    public override void Fire()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<BaseBullet>()._isFriendly = false;
+        bullet.GetComponent<BaseBullet>().Attack();
     }
 }

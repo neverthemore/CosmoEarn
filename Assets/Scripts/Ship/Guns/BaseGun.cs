@@ -26,6 +26,6 @@ public class BaseGun : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<BaseBullet>()._isFriendly = true;
         bullet.GetComponent<BaseBullet>().Attack();
-        Debug.Log("Атака");
+        //Debug.Log("Атака");
     }
 }

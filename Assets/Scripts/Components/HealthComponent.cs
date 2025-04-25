@@ -1,3 +1,4 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 
@@ -17,8 +18,8 @@ public class HealthComponent : MonoBehaviour, IDamageable
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log("Получен урон");
-        if (currentHealth < 0)
+        Debug.Log("Получен урон: " + name);
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -26,8 +27,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
 
     void Die()
     {
-        //У всех своя
-        //Например Дестрой
+        Destroy(gameObject);    
     }
 
     public void Heal(int amount)

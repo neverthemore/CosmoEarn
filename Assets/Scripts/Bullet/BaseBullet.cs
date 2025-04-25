@@ -17,7 +17,7 @@ public class BaseBullet : MonoBehaviour
     public void Attack()
     {
         rb.linearVelocity = transform.up * bulletSpeed;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    //+ еще сделать сохранение
     public static GameManager Instance { get; private set; }
 
     public int Money { get; private set; }

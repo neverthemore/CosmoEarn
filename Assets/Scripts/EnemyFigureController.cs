@@ -1,68 +1,43 @@
 using JetBrains.Annotations;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI.Table;
 
+
 public class EnemyFigureController : MonoBehaviour
 {
-    [SerializeField] BaseEnemy[] enemies;
-    private int _maxNumOfEnemy;
-    private Vector2 _centralPoint;
-    void Start()
-    {
-        _maxNumOfEnemy = enemies.Length;
-        _centralPoint = transform.position;
-    }
+    [SerializeField] private EnemySpawner spawner;
+    [SerializeField] private Transform formationCenter;
 
-    void moveCentralPoint()
+    [SerializeField] private float _spacing = 1.5f;
+
+    public enum FormationType { Triangle, Diamond, Raws, Circle}
+    private FormationType _currentFormation = FormationType.Triangle;
+
+    private Dictionary<FormationType, IFormationPattern> formationPatterns;
+
+    private void Awake()
     {
-        _centralPoint = transform.position;
-    }
-    void MakePiramid(Vector2 spawn, int n, float delta)
-    {
-        _centralPoint = spawn;
-        int enemyIndex = 0;
-        for (int i = 0; i < n; i++)
+        formationPatterns = new Dictionary<FormationType, IFormationPattern>
         {
-            for (int j = 0; j < i+1; j++)
-            {
-                float xOffset = (j - i / 2f) * delta;
-                float yOffset = -i * delta; 
-                enemies[enemyIndex].transform.localPosition = new Vector2(_centralPoint.x + xOffset, _centralPoint.y + yOffset);
-                enemyIndex++;
-            }
-        }
-    }    
-
-    void MakeSquare(Vector2 spawn, int n, float radius)
-    {
-        int sideLen = (int)Mathf.Sqrt(n);
-        _centralPoint = spawn;
-        int enemyIndex = 0;
-        for (int i = 0; i < sideLen; i++)
-        {
-            for (int j = 0; j < sideLen; j++)
-            {                
-                float xOffset = -radius + j * (radius * 2) / (sideLen - 1);
-                float yOffset = -radius + i * (radius * 2) / (sideLen - 1);
-                enemies[enemyIndex].transform.localPosition = new Vector2(_centralPoint.x + xOffset, _centralPoint.y + yOffset);
-                enemyIndex++;
-            }
-        }
+            {FormationType.Triangle, new TriangleFormation() }
+        };
     }
-    void DestroyEnemy()
-    {
-        
-    }
-
-    void ChangingFigures()
-    {
-        
-    }
-    
     void Update()
     {
-        MakePiramid(new Vector2(0, 0.5f), 5, 1);
+        IFormationPattern pattern = formationPatterns[_currentFormation];
+        List<Vector2> targetPositions = pattern.GetPoints(spawner.enemies.Count, formationCenter, _spacing);
+
+        for (int i = 0; i < spawner.enemies.Count; i++)
+        {
+            spawner.enemies[i].SetTargetPosition(targetPositions[i]);
+        }
     }
+    
+    void MoveCentralPoint()
+    {
+        //_centralPoint = transform.position;
+    }       
 }
