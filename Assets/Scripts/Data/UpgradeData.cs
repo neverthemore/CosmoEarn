@@ -8,6 +8,8 @@ public class UpgradeData : ScriptableObject
     public int baseCost;
     public int level;
     public int maxLevel;
+    
+   
 
     public float[] valuesPerLevel; //например [1.0, 1.2, 1.4 и тд]
 
