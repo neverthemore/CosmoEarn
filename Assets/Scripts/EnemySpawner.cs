@@ -20,11 +20,11 @@ public class EnemySpawner : MonoBehaviour
         float minX = -8f;
         float maxX = 8f;
 
-        float spawnY = -Camera.main.orthographicSize - 2f;
+        float spawnY = Camera.main.orthographicSize + 2f;
 
         Vector2 spawnPosition = new Vector2 (Random.Range(minX, maxX), spawnY);
         GameObject newEnemyObj = Instantiate(simpleEnemy, spawnPosition, Quaternion.identity);
-        newEnemyObj.transform.SetParent(formationPoint, false);
+        //newEnemyObj.transform.SetParent(formationPoint, false);
 
         BaseEnemy newEnemy = newEnemyObj.GetComponent<BaseEnemy>();
         if (newEnemy != null )

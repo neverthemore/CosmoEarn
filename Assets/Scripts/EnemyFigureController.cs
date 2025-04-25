@@ -14,7 +14,7 @@ public class EnemyFigureController : MonoBehaviour
     [SerializeField] private float _spacing = 1.5f;
 
     public enum FormationType { Triangle, Diamond, Raws, Circle}
-    private FormationType _currentFormation = FormationType.Triangle;
+    public FormationType _currentFormation = FormationType.Triangle;
 
     private Dictionary<FormationType, IFormationPattern> formationPatterns;
 
@@ -22,7 +22,10 @@ public class EnemyFigureController : MonoBehaviour
     {
         formationPatterns = new Dictionary<FormationType, IFormationPattern>
         {
-            {FormationType.Triangle, new TriangleFormation() }
+            {FormationType.Triangle, new TriangleFormation() },
+            {FormationType.Circle, new CircleFormation() },
+            {FormationType.Raws, new LineFormation() }
+            
         };
     }
     void Update()
