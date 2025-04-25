@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Button SQR Hover_0: 3212010668272512379
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
