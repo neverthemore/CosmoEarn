@@ -1,16 +1,20 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour
 {
-      
+
     [SerializeField] private AudioMixer musicMixer;
     [SerializeField] private AudioMixer sfxMixer;
 
     [SerializeField] private Button exitButton;
     public Slider sfxSlider;
     public Slider musicSlider;
+
+   
+
     void SetSliders()
     {
         sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume");
@@ -22,8 +26,8 @@ public class SettingsManager : MonoBehaviour
           
             musicMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("SFXVolume"));
             sfxMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
-            SetSliders();   
-       
+            SetSliders();
+      
     }
 
     public void UpdateSFXVolume()
@@ -40,11 +44,8 @@ public class SettingsManager : MonoBehaviour
    
     private void ExitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
+        SceneManager.LoadScene("Upgrade_Menu");
+  
     }
 
    

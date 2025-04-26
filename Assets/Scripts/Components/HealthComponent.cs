@@ -1,6 +1,8 @@
 using System.Linq;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 
 public class HealthComponent : MonoBehaviour, IDamageable
@@ -10,7 +12,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
 
     [SerializeField] bool _isFriendly = false;
 
-    
+    [SerializeField] AudioSource _audioSource;
     [SerializeField] Animator[] animator;
 
     [SerializeField] GameObject energyCore;
@@ -19,7 +21,10 @@ public class HealthComponent : MonoBehaviour, IDamageable
     [SerializeField] UpgradeData upgrade;
 
     private void Awake()
-    {
+    {   
+            _audioSource = GetComponent<AudioSource>();
+            _audioSource = gameObject.AddComponent<AudioSource>();
+        
         if (_isPlayer)
         {
             maxHealth = (int)upgrade.GetCurrentValue();
@@ -31,27 +36,27 @@ public class HealthComponent : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;;
+        currentHealth -= damage;
+        //animator[Random.Range(0, animator.Length)].Play();
         Debug.Log("Получен урон: " + name);
         if (currentHealth <= 0)
         {
-            Die();
-            
+            Die();     
         }
     }
 
     void Die()
     {
         if (!_isPlayer)
-        {
+        {        
             Instantiate(energyCore, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(gameObject);      
+            _audioSource.Play();
         }
         else
         {
-            //Выход в меню
-            GameManager.Instance._isReturnToAngar = true;
-            SceneLoader.Instance.LoadSceneByName("Upgrade_menu");
+            _audioSource.Play();
+            SceneManager.LoadScene("Upgrade_Menu");
         }
            
     }

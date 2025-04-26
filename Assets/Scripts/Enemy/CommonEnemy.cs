@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class CommonEnemy : BaseEnemy
 {
@@ -11,6 +12,10 @@ public class CommonEnemy : BaseEnemy
     float fireRate;
     
     private float fireCooldown;
+
+   
+
+
 
     protected override void Update()
     {
