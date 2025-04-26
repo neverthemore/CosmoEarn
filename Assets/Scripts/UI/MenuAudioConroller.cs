@@ -4,73 +4,40 @@ using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
-    public static SettingsManager Instance;
-    
-    [Header("Audio Mixers")]
+      
     [SerializeField] private AudioMixer musicMixer;
     [SerializeField] private AudioMixer sfxMixer;
 
-    [Header("UI Elements")]
-    [SerializeField] private Slider musicSlider;
-    [SerializeField] private Slider sfxSlider;
     [SerializeField] private Button exitButton;
-
-    private const string MusicVolumeKey = "MusicVolume";
-    private const string SFXVolumeKey = "SFXVolume";
-
-    void Awake()
+    public Slider sfxSlider;
+    public Slider musicSlider;
+    void SetSliders()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        InitializeAudioSettings();
-        SetupUIListeners();
+        sfxSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+        musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
     }
-
-
-    private void InitializeAudioSettings()
+    void Start()
     {
-   
-        musicSlider.value = PlayerPrefs.GetFloat(MusicVolumeKey, 0.4f);
-        sfxSlider.value = PlayerPrefs.GetFloat(SFXVolumeKey, 0.75f);
-
-        SetMusicVolume(musicSlider.value);
-        SetSFXVolume(sfxSlider.value);
-    }
-
-    private void SetupUIListeners()
-    {
-        musicSlider.onValueChanged.AddListener(SetMusicVolume);
-        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
         exitButton.onClick.AddListener(ExitGame);
+          
+            musicMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("SFXVolume"));
+            sfxMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("MusicVolume"));
+            SetSliders();   
+       
     }
 
-    public void SetMusicVolume(float volume)
+    public void UpdateSFXVolume()
     {
-        musicMixer.SetFloat("MasterVolume", ConvertToDecibel(volume));
-        PlayerPrefs.SetFloat(MusicVolumeKey, volume);
+        sfxMixer.SetFloat("SFXVolume", sfxSlider.value);
+        PlayerPrefs.SetFloat("SFXVolume", sfxSlider.value);
     }
-
-    public void SetSFXVolume(float volume)
+    // called when we update the music slider
+    public void UpdateMusicVolume()
     {
-        sfxMixer.SetFloat("MasterVolume", ConvertToDecibel(volume));
-        PlayerPrefs.SetFloat(SFXVolumeKey, volume);
+        musicMixer.SetFloat("MusicVolume", musicSlider.value);
+        PlayerPrefs.SetFloat("MusicVolume", musicSlider.value);
     }
-
-    private float ConvertToDecibel(float volume)
-    {
-        // Конвертация линейной шкалы (0-1) в децибелы
-        return volume <= 0.0001f ? -80f : Mathf.Log10(volume) * 20f;
-    }
-
+   
     private void ExitGame()
     {
 #if UNITY_EDITOR
@@ -80,11 +47,5 @@ public class SettingsManager : MonoBehaviour
 #endif
     }
 
-    void OnDestroy()
-    {     
-        if (Instance == this)
-        {
-            PlayerPrefs.Save();
-        }
-    }
+   
 }
