@@ -18,6 +18,8 @@ public class StartGameButton : MonoBehaviour
 
     [SerializeField] Image FadeAngarImage;
 
+    [SerializeField] bool _InMenu = true;
+
     private void Start()
     {
 
@@ -42,12 +44,24 @@ public class StartGameButton : MonoBehaviour
         FadeImage.color = transColor;
         FadeAngarImage.color = transColor;
         FadeImage.gameObject.SetActive(false);
+
+        //Запустить ангар при условии
+        if (GameManager.Instance.NeedToAngar())
+        {
+            StartAngar();
+        }
     }
 
     public void StartGame()
     {
         Debug.Log("Начали");
         StartCoroutine(StartAnim());
+    }
+
+    public void StartAngar()
+    {
+        AngarPanel.gameObject.SetActive(true);
+        FadeAngarImage.gameObject.SetActive(false);
     }
 
     private IEnumerator StartAnim()

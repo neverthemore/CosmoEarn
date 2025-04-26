@@ -31,8 +31,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        //animator[Random.Range(0, animator.Length)].Play();
+        currentHealth -= damage;;
         Debug.Log("Получен урон: " + name);
         if (currentHealth <= 0)
         {
@@ -51,6 +50,8 @@ public class HealthComponent : MonoBehaviour, IDamageable
         else
         {
             //Выход в меню
+            GameManager.Instance._isReturnToAngar = true;
+            SceneLoader.Instance.LoadSceneByName("Upgrade_menu");
         }
            
     }

@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]public int Money { get; private set; }
 
+    [SerializeField] public bool _isReturnToAngar = false;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -28,6 +30,16 @@ public class GameManager : MonoBehaviour
         if (Money >= amount)
         {
             Money -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public bool NeedToAngar()
+    {
+        if (_isReturnToAngar)
+        {
+            _isReturnToAngar = false;
             return true;
         }
         return false;
