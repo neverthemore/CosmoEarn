@@ -43,7 +43,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
         }
     }
 
-    void Die()
+    protected virtual void Die()
     {
         if (!_isPlayer)
         {        

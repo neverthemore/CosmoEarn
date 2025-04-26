@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4030703950171559788}
   - component: {fileID: 5169885255466604737}
-  - component: {fileID: 7873887978633922453}
   - component: {fileID: 2362179491454298803}
   - component: {fileID: 3100203005460911599}
   - component: {fileID: 6457188432648027672}
+  - component: {fileID: 8869506653280964867}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -95,25 +95,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7873887978633922453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570557279007158166}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2896caff85e90644c9e1b6d0877302d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 200
-  _isFriendly: 0
-  _audioSource: {fileID: 0}
-  animator: []
-  energyCore: {fileID: 7824927024717667108, guid: 4b155de993c31fa438cb79592106c47d, type: 3}
-  _isPlayer: 0
-  upgrade: {fileID: 0}
 --- !u!61 &2362179491454298803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -192,6 +173,26 @@ MonoBehaviour:
   - {fileID: 5120366828962293650}
   - {fileID: 7244737664612667569}
   - {fileID: 7727171939983871038}
+--- !u!114 &8869506653280964867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570557279007158166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a93e2002a9e108d43a9b05aa49d17ff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+  _isFriendly: 0
+  _audioSource: {fileID: 0}
+  animator: []
+  energyCore: {fileID: 7824927024717667108, guid: 4b155de993c31fa438cb79592106c47d, type: 3}
+  _isPlayer: 0
+  upgrade: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!1 &4096536763314460770
 GameObject:
   m_ObjectHideFlags: 0
