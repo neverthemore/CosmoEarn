@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class StartGameButton : MonoBehaviour
 {
@@ -77,15 +78,20 @@ public class StartGameButton : MonoBehaviour
 
         foreach (var image in ComicsImages)
         {
+            float timeForImage = 3f;
             image.gameObject.SetActive(true);
             color = image.color;
             while (color.a < 1)
             {
+                if (Input.GetKeyDown(KeyCode.Mouse0))
+                {
+                    timeForImage = 0.1f;
+                }
                 color.a += Time.deltaTime / ComicsPageTime;
                 image.color = color;
                 yield return null;
             }
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(timeForImage);
         } 
         
         AngarPanel.gameObject.SetActive(true);

@@ -12,7 +12,7 @@ public class BaseEnemy : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 targetPosition;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
