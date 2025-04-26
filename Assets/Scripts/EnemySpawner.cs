@@ -61,11 +61,11 @@ public class EnemySpawner : MonoBehaviour
         //Либо волна, либо случ. спавн
         if (Random.Range(0,2) == 0)
         {
-            return new TrickleSpawn(currentLevel * 2, 1f);
+            return new TrickleSpawn(currentLevel * 3, 1f);
         }
         else
         {
-            return new WaveSpawn(currentLevel * 2, 1, currentLevel);
+            return new WaveSpawn(currentLevel * 2, currentLevel * 2, currentLevel);
         }
 
     }
