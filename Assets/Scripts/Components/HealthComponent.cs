@@ -55,6 +55,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
         }
         else
         {
+            GameManager.Instance._isReturnToAngar = true;
             _audioSource.Play();
             SceneManager.LoadScene("Upgrade_Menu");
         }

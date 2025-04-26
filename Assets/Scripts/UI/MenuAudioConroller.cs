@@ -44,6 +44,7 @@ public class SettingsManager : MonoBehaviour
    
     private void ExitGame()
     {
+        GameManager.Instance._isReturnToAngar = true;
         SceneManager.LoadScene("Upgrade_Menu");
   
     }
