@@ -18,7 +18,8 @@ public class BaseGun : MonoBehaviour
         {
             Fire();
             fireCooldown = fireRate;
-            FireSound.Play();
+            
+            FireSound?.Play();
         }
     }
 

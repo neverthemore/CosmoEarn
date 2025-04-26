@@ -26,7 +26,7 @@ public class CommonEnemy : BaseEnemy
 
     public override void Fire()
     {
-        EnemyFire.Play();
+        //EnemyFire.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<BaseBullet>()._isFriendly = false;
         bullet.GetComponent<BaseBullet>().Attack();
