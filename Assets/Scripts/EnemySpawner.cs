@@ -9,6 +9,13 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject simpleEnemy;
     [SerializeField] Transform formationPoint;
 
+    private int currentLevel = 0;
+
+    private float checkSpawn = 0f;
+
+    private float checkCooldown = 1f;
+    private float currentCooldown = 0f;
+
     private ISpawnStrategy currentStrategy;
 
     private void Start()
@@ -20,10 +27,47 @@ public class EnemySpawner : MonoBehaviour
         //+ я бы сделал так, что формирования делились например по 10 кораблей на фигуру
     }
 
+    private void Update()
+    {
+        currentCooldown += Time.deltaTime;
+
+        if (currentCooldown >= checkCooldown)               //Плохая реализация
+        {
+            enemies.RemoveAll(enemy => enemy == null);
+            currentCooldown = 0f;
+        }
+
+        if (enemies.Count == 0)
+        {
+            checkSpawn += Time.deltaTime;
+        }
+
+        if (checkSpawn > 5f)
+        {
+            currentLevel++;
+            SetStrategy(ChooseStartegy());
+            checkSpawn = 0f;
+        }
+    }
+
     public void SetStrategy(ISpawnStrategy strategy)
     {
         currentStrategy = strategy;
         StartCoroutine(currentStrategy.ExecuteSpawn(this));
+    }
+
+    private ISpawnStrategy ChooseStartegy()
+    {
+        //Либо волна, либо случ. спавн
+        if (Random.Range(0,2) == 0)
+        {
+            return new TrickleSpawn(currentLevel * 2, 1f);
+        }
+        else
+        {
+            return new WaveSpawn(currentLevel * 2, 1, currentLevel);
+        }
+
     }
 
     public void SpawnEnemy()

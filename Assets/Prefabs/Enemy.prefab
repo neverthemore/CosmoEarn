@@ -201,7 +201,8 @@ MonoBehaviour:
   targetHoldRadius: 0.3
   bulletPrefab: {fileID: 2704111043921868559, guid: f178c9164573fc04f928e7b8a9e0b37d, type: 3}
   firePoint: {fileID: 7921487684808223683}
-  maxFireRate: 0
+  minFireRate: 7
+  maxFireRate: 15
   dragRate: 0
   EnemyFire: {fileID: 3686690206457131014, guid: 289ea4e2100a88d4bbc2f3db0e0ba592, type: 3}
 --- !u!1 &724180888094240898

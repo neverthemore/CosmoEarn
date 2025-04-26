@@ -4,6 +4,7 @@ public class CommonEnemy : BaseEnemy
 {
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform firePoint;
+    [SerializeField] float minFireRate;
     [SerializeField] float maxFireRate;
     [SerializeField] float dragRate;
     [SerializeField] AudioSource EnemyFire;
@@ -19,7 +20,7 @@ public class CommonEnemy : BaseEnemy
         if (fireCooldown <= 0f)
         {
             Fire();
-            fireRate = Random.Range(1, maxFireRate);
+            fireRate = Random.Range(minFireRate, maxFireRate);
             fireCooldown = fireRate;
         }
     }
