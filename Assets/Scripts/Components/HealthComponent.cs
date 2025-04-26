@@ -27,10 +27,9 @@ public class HealthComponent : MonoBehaviour, IDamageable
         if (_isPlayer)
         {
             maxHealth = (int)upgrade.GetCurrentValue();
-            currentHealth = maxHealth;
             Debug.Log("Жизней: " + currentHealth);
         }
-
+        currentHealth = maxHealth;
     }
 
     public void TakeDamage(int damage)

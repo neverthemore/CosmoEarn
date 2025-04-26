@@ -46,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
         if (checkSpawn > 5f)
         {
             currentLevel++;
-            if (currentLevel == 10) SpawnBoss();
+            if (currentLevel == 15) SpawnBoss();
             SetStrategy(ChooseStartegy());
             checkSpawn = 0f;
         }
@@ -92,7 +92,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnBoss()
     {
-        GameObject boss = Instantiate(bossEnemy, new Vector2(0, -5.4f), Quaternion.identity);
+        GameObject boss = Instantiate(bossEnemy, new Vector2(0, 5.4f), Quaternion.Euler(0,0, 180));
     }
 
 }
