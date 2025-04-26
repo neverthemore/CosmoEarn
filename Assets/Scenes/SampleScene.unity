@@ -273,6 +273,7 @@ MonoBehaviour:
   thrustForce: 5
   sideForce: 5
   backForce: 1
+  upgrade: {fileID: 11400000, guid: 0ff9ebd835ed8e8458740b65e67eb390, type: 2}
 --- !u!61 &17877529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -333,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   _isFriendly: 1
+  _audioSource: {fileID: 0}
   animator: []
   energyCore: {fileID: 0}
   _isPlayer: 1
@@ -3155,6 +3157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30402db6b8e901469e14c8a9f523d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isReturnToAngar: 0
 --- !u!4 &1355371796
 Transform:
   m_ObjectHideFlags: 0

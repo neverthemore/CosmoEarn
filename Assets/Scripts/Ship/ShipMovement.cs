@@ -9,6 +9,8 @@ public class ShipMovement : MonoBehaviour
     [Tooltip("Сила, с которой тянет назад")]
     [SerializeField] float backForce = 1.0f;
 
+    [SerializeField] UpgradeData upgrade;
+
 
     Rigidbody2D rb;
     private Vector2 moveInput;
@@ -21,6 +23,8 @@ public class ShipMovement : MonoBehaviour
         controls = new PlayerControls();
         controls.Gameplay.Move.performed += read => moveInput = read.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += offRead => moveInput = Vector2.zero;
+
+        thrustForce = upgrade.GetCurrentValue();
     }
     void OnEnable() => controls.Gameplay.Enable();
     void OnDisable() => controls.Gameplay.Disable();

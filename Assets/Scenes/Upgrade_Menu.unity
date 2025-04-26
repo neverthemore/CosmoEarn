@@ -1727,6 +1727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30402db6b8e901469e14c8a9f523d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isReturnToAngar: 0
 --- !u!4 &697486161
 Transform:
   m_ObjectHideFlags: 0
@@ -2463,7 +2464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1066111362
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3204,6 +3205,7 @@ MonoBehaviour:
   ComicsPageTime: 0.2
   AngarPanel: {fileID: 254560944}
   FadeAngarImage: {fileID: 2049965601}
+  _InMenu: 1
 --- !u!1 &1182767185
 GameObject:
   m_ObjectHideFlags: 0
@@ -3759,7 +3761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0422\u043E\u043F\u043B\u0438\u0432\u043D\u044B\u0439 \u0431\u0430\u043A"
+  m_text: "\u0414\u0432\u0438\u0433\u0430\u0442\u0435\u043B\u0438\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d34c2c888f378cb46bd59733b3abf99c, type: 2}
   m_sharedMaterial: {fileID: 2840659555001464443, guid: d34c2c888f378cb46bd59733b3abf99c, type: 2}

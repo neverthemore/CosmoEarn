@@ -19,7 +19,7 @@ MonoBehaviour:
     \u043F\u043E\u0432\u044B\u0448\u0430\u044E\u0442 \u0436\u0438\u0432\u0443\u0447\u0435\u0441\u0442\u044C
     \u043A\u043E\u0440\u0430\u0431\u043B\u044F\n"
   baseCost: 5
-  level: 9
+  level: 0
   maxLevel: 9
   sprite: {fileID: 3743528637899671182, guid: 202dd3a9f76572d4f90123df53eaf329, type: 3}
   valuesPerLevel:

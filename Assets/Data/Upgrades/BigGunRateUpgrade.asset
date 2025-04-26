@@ -20,6 +20,7 @@ MonoBehaviour:
   maxLevel: 5
   sprite: {fileID: -4111859796222110602, guid: f2e356055120b844c98d7d524e095292, type: 3}
   valuesPerLevel:
+  - 0
   - 2
   - 1.6
   - 1.2
