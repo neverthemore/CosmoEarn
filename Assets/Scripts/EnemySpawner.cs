@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public List<BaseEnemy> enemies;
 
     [SerializeField] GameObject simpleEnemy;
+    [SerializeField] GameObject bossEnemy;
     [SerializeField] Transform formationPoint;
 
     private int currentLevel = 0;
@@ -45,6 +46,7 @@ public class EnemySpawner : MonoBehaviour
         if (checkSpawn > 5f)
         {
             currentLevel++;
+            if (currentLevel == 10) SpawnBoss();
             SetStrategy(ChooseStartegy());
             checkSpawn = 0f;
         }
@@ -86,6 +88,11 @@ public class EnemySpawner : MonoBehaviour
         {
             enemies.Add(newEnemy);
         }
+    }
+
+    public void SpawnBoss()
+    {
+        GameObject boss = Instantiate(bossEnemy, new Vector2(0, -5.4f), Quaternion.identity);
     }
 
 }

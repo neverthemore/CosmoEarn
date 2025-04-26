@@ -50,16 +50,18 @@ public class HealthComponent : MonoBehaviour, IDamageable
         if (!_isPlayer)
         {        
             Instantiate(energyCore, transform.position, Quaternion.identity);
-            Destroy(gameObject);      
-            _audioSource.Play();
+            if (_audioSource != null)
+                _audioSource.Play();
+            Destroy(gameObject); 
         }
         else
         {
             GameManager.Instance._isReturnToAngar = true;
-            _audioSource.Play();
             SceneManager.LoadScene("Upgrade_Menu");
+            if (_audioSource != null)
+                _audioSource.Play();
         }
-           
+
     }
 
     public void Heal(int amount)

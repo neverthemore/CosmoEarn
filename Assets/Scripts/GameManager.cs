@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        AddMoney(1000);
+        //AddMoney(1000);
     }
 
     public void AddMoney(int amount)
