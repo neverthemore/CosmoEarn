@@ -45,7 +45,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
     {
         if (!_isPlayer)
         {
-            Instantiate(energyCore);
+            Instantiate(energyCore, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         else
