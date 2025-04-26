@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -40,11 +41,7 @@ public class SettingsManager : MonoBehaviour
    
     private void ExitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-            Application.Quit();
-#endif
+        SceneManager.LoadScene("Upgrade_Menu");
     }
 
    

@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class HealthComponent : MonoBehaviour, IDamageable
@@ -50,7 +51,7 @@ public class HealthComponent : MonoBehaviour, IDamageable
         }
         else
         {
-            //Выход в меню
+            SceneManager.LoadScene("Upgrade_Menu");
         }
            
     }
