@@ -4,26 +4,18 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class BaseBullet : MonoBehaviour
 {
-    [SerializeField] float bulletSpeed = 10f;
-    [SerializeField] int bulletDamage = 1;
-
-    [SerializeField] Animator[] animator;
-    [SerializeField] GameObject bulletSprite;
+    [SerializeField]protected float bulletSpeed = 10f;
+    [SerializeField]protected int bulletDamage = 1;
 
 
     public bool _isFriendly = false;
 
-    private bool _isExplosed = false;
     //Тут нужно еще делать проверку, своя ли это пуля, чтобы себя не била
-    Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        foreach (var animator in animator)
-        {
-            animator.gameObject.SetActive(false);
-        }
     }
     public void Attack()
     {
@@ -35,26 +27,23 @@ public class BaseBullet : MonoBehaviour
         {
             rb.linearVelocity = -transform.up * bulletSpeed;
         }
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 4f);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<IDamageable>() != null && (collision.gameObject.GetComponent<IDamageable>().IsFriendly() != _isFriendly))
         {
             
             collision.gameObject.GetComponent<IDamageable>().TakeDamage(bulletDamage);
-
-            bulletSprite.SetActive(false);
+            
             gameObject.GetComponent<Collider2D>().enabled = false;
             rb.linearVelocity = Vector2.zero;
 
 
             int randomIndex = Random.Range(0, 2);
 
-            animator[randomIndex].gameObject.SetActive(true);
-            animator[randomIndex].SetTrigger("Boom");
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject);
         }
         
     }

@@ -98,8 +98,8 @@ GameObject:
   - component: {fileID: 6188907501308606305}
   - component: {fileID: 1828104185354597177}
   - component: {fileID: 7642119148046001215}
-  - component: {fileID: 8256376616794952025}
   - component: {fileID: 434227080385466629}
+  - component: {fileID: 4626299744817510262}
   m_Layer: 0
   m_Name: LaserBullet
   m_TagString: Untagged
@@ -207,25 +207,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8256376616794952025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2704111043921868559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e4ee8c58bad174b82c710c44a3cf2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletSpeed: 10
-  bulletDamage: 1
-  animator:
-  - {fileID: 8216713255819944424}
-  - {fileID: 632885059047206232}
-  bulletSprite: {fileID: 2349748760518837905}
-  _isFriendly: 0
 --- !u!61 &434227080385466629
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -272,6 +253,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.54, y: 0.87}
   m_EdgeRadius: 0
+--- !u!114 &4626299744817510262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2704111043921868559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bed0585d9eafb11478d09afdc3aa4379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 10
+  bulletDamage: 1
+  _isFriendly: 0
+  animator:
+  - {fileID: 8216713255819944424}
+  - {fileID: 632885059047206232}
+  bulletSprite: {fileID: 2349748760518837905}
 --- !u!1001 &383097388703289029
 PrefabInstance:
   m_ObjectHideFlags: 0
