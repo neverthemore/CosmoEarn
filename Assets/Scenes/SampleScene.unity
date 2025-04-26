@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 17877530}
   m_Layer: 0
   m_Name: PlayerShip
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &17877525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -333,8 +333,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   _isFriendly: 1
-  PlayerDeathSound: {fileID: 474842500}
   animator: []
+  energyCore: {fileID: 0}
+  _isPlayer: 1
+  upgrade: {fileID: 11400000, guid: c8a1ec12384f37648bf5d0f5fd64c00e, type: 2}
 --- !u!1 &74498515
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,37 +866,6 @@ Transform:
   - {fileID: 1757227449}
   - {fileID: 1758528728}
   - {fileID: 1181893829}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &279566096
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 279566097}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &279566097
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279566096}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9444025, y: -5.13, z: -3.8084242}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366457803
@@ -1828,7 +1799,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3958069626190608817, guid: 84597cfda29b8c148857a5a0bde06d6f, type: 3}
   firePoint: {fileID: 415713826}
   fireRate: 2
+  upgrade: {fileID: 0}
   FireSound: {fileID: 1713759809}
+  isPlayer: 0
 --- !u!1 &924136052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,7 +2526,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -150
   m_Sprite: {fileID: 893498098, guid: f5ba9a15f72fc014d974ccefbfb532ac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3241,7 +3214,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2704111043921868559, guid: c24c935d4e5861d4b97bfbcc57e05552, type: 3}
   firePoint: {fileID: 1955376107}
   fireRate: 0.5
+  upgrade: {fileID: 11400000, guid: 618d409135843fd45b9bb0ffac00cb2b, type: 2}
   FireSound: {fileID: 1515165192}
+  isPlayer: 1
   firePoints:
   - {fileID: 1955376107}
   - {fileID: 1886859368}
@@ -3954,7 +3929,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3958069626190608817, guid: 84597cfda29b8c148857a5a0bde06d6f, type: 3}
   firePoint: {fileID: 1110137519}
   fireRate: 2
+  upgrade: {fileID: 11400000, guid: 3b096adc5339820439cb835578307fd4, type: 2}
   FireSound: {fileID: 1111041630}
+  isPlayer: 1
 --- !u!1 &1932528447
 GameObject:
   m_ObjectHideFlags: 0
@@ -4461,4 +4438,3 @@ SceneRoots:
   - {fileID: 2056511915}
   - {fileID: 277308493}
   - {fileID: 135631232}
-  - {fileID: 279566097}

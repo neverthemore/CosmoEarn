@@ -13,10 +13,20 @@ public class HealthComponent : MonoBehaviour, IDamageable
     
     [SerializeField] Animator[] animator;
 
+    [SerializeField] GameObject energyCore;
+
+    [SerializeField] private bool _isPlayer = false;
+    [SerializeField] UpgradeData upgrade;
 
     private void Awake()
     {
-        currentHealth = maxHealth;
+        if (_isPlayer)
+        {
+            maxHealth = (int)upgrade.GetCurrentValue();
+            currentHealth = maxHealth;
+            Debug.Log("Жизней: " + currentHealth);
+        }
+
     }
 
     public void TakeDamage(int damage)
@@ -33,7 +43,16 @@ public class HealthComponent : MonoBehaviour, IDamageable
 
     void Die()
     {
-        Destroy(gameObject);    
+        if (!_isPlayer)
+        {
+            Instantiate(energyCore);
+            Destroy(gameObject);
+        }
+        else
+        {
+            //Выход в меню
+        }
+           
     }
 
     public void Heal(int amount)

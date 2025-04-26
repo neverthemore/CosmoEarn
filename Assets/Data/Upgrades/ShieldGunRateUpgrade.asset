@@ -18,6 +18,7 @@ MonoBehaviour:
   level: 0
   maxLevel: 5
   valuesPerLevel:
+  - 0
   - 0.5
   - 1.5
   - 2.5

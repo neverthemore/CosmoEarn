@@ -107,8 +107,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1
   _isFriendly: 0
-  PlayerDeathSound: {fileID: 490133242298331768, guid: fd7667ccbb6daf74e8fb56598289bf59, type: 3}
   animator: []
+  energyCore: {fileID: 7824927024717667108, guid: 4b155de993c31fa438cb79592106c47d, type: 3}
+  _isPlayer: 0
+  upgrade: {fileID: 0}
 --- !u!61 &5229487943766818910
 BoxCollider2D:
   m_ObjectHideFlags: 0

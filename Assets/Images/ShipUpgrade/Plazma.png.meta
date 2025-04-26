@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b625d51783dafe347b9574163c33b962
+guid: f2e356055120b844c98d7d524e095292
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -963937397219638321
-    second: music-1024_0
+      213: -4111859796222110602
+    second: "ChatGPT Image 26 \u0430\u043F\u0440. 2025 \u0433., 05_10_53_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: music-1024_0
+      name: "ChatGPT Image 26 \u0430\u043F\u0440. 2025 \u0433., 05_10_53_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
+        x: 64
+        y: 57
+        width: 889
+        height: 872
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc3420d5b086f92f0800000000000000
-      internalID: -963937397219638321
+      spriteID: 67498f70d4dbfe6c0800000000000000
+      internalID: -4111859796222110602
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      music-1024_0: -963937397219638321
+      "ChatGPT Image 26 \u0430\u043F\u0440. 2025 \u0433., 05_10_53_0": -4111859796222110602
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

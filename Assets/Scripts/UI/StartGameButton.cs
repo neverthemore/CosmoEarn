@@ -16,6 +16,8 @@ public class StartGameButton : MonoBehaviour
 
     [SerializeField] GameObject AngarPanel;
 
+    [SerializeField] Image FadeAngarImage;
+
     private void Start()
     {
 
@@ -38,6 +40,7 @@ public class StartGameButton : MonoBehaviour
 
         transColor = new Color(0, 0, 0, 0);
         FadeImage.color = transColor;
+        FadeAngarImage.color = transColor;
         FadeImage.gameObject.SetActive(false);
     }
 
@@ -83,6 +86,18 @@ public class StartGameButton : MonoBehaviour
                 yield return null;
             }
             yield return new WaitForSeconds(3f);
-        }        
+        } 
+        
+        AngarPanel.gameObject.SetActive(true);
+        FadeAngarImage.gameObject.SetActive(true);
+        color = FadeAngarImage.color;
+        while (color.a > 0)
+        {
+            color.a -= Time.deltaTime / FadeTime;
+            FadeImage.color = color;
+            yield return null;
+        }
+        FadeAngarImage.gameObject.SetActive(false);
+
     }
 }

@@ -6,12 +6,25 @@ public class BaseGun : MonoBehaviour
 
     [SerializeField] protected Transform firePoint;
 
-    [SerializeField] float fireRate = 1f;
+    [SerializeField] protected float fireRate = 1f;
+
+    [SerializeField] protected UpgradeData upgrade;
 
     private float fireCooldown = 0f;
     [SerializeField] AudioSource FireSound;
+
+    [SerializeField] private bool isPlayer = false;
+
+    private void Start()
+    {
+        if (isPlayer)
+        {
+            fireRate = upgrade.GetCurrentValue();
+        }
+    }
     public virtual void Attack()
     {
+        if (fireRate <= 0) return;
         fireCooldown -= Time.deltaTime;
 
         if (fireCooldown <= 0f)
